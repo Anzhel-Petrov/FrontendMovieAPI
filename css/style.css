@@ -1,0 +1,23 @@
+body {
+    padding: 0;
+    margin: 0;
+    max-width:800px;
+    margin: 1rem auto;
+    font-family: Lato;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "AreaOne AreaTwo"
+      "AreaOne AreaTwo"
+      "AreaOne AreaTwo";
+  }
+  .AreaOne { grid-area: AreaOne; }
+  .AreaTwo { grid-area: AreaTwo; }
+
+
+
