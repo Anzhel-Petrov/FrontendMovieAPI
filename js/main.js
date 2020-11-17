@@ -1,5 +1,5 @@
-let topMovies = ['tt1375666', 'tt0076759', 'tt2015381'];
-    let movies_result = [];
+let topMovies = ['tt1375666', 'tt1136608', 'tt2015381'];
+let movies_result = [];
 
     for(i = 0; i < topMovies.length; i++)
     {
@@ -23,7 +23,7 @@ let topMovies = ['tt1375666', 'tt0076759', 'tt2015381'];
                         <h2>${movie.Title}</h2>
                         <p>Released: ${movie.Released}</p>
                         <p>Director: ${movie.Director}</p>
-                        <iframe></iframe>
+                        <iframe src="https://www.youtube.com/embed/${trailer(movie.imdbID)}"></iframe>
                         <p>Plot: ${movie.Plot}</p>
                         <a onclick="hideDetail(${movie.imdbID})" ><b>ClOSE</b></a>
                     </article>
@@ -47,3 +47,18 @@ let topMovies = ['tt1375666', 'tt0076759', 'tt2015381'];
     function hideDetail(test){
         test.style.display = "none";
     }
+
+    const OMDB_YouTubeID = {tt1375666: 'YoHD9XEInc0', tt1136608: 'DyLUwOcR5pk', tt2015381: 'd96cjJhvlMA'};
+    function trailer(ID){
+    for (const [key, value] of Object.entries(OMDB_YouTubeID)) {
+        if (ID == key)
+            {
+                return value;
+            }
+        }
+    }
+
+
+
+
+    // https://www.youtube.com/embed/YoHD9XEInc0

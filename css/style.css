@@ -47,3 +47,7 @@ main article{
     align-items: center;
     text-align: center;
 }
+
+.detailWindow{
+    display: none;
+}
