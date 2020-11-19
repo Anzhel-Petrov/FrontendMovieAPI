@@ -97,8 +97,8 @@ function fetch_info(){
         test.style.display = "none";
     }
 
-    const OMDB_YouTubeID = {tt1375666: 'YoHD9XEInc', tt1136608: 'DyLUwOcR5pk', tt2015381: 'd96cjJhvlMA', tt0816692: 'zSWdZVtXT7E', tt0499549: '6ziBFh3V1aM', 
-    tt0499549: 'eOrNdBpGMv8', tt0076759: 'vZ734NWnAHA', tt0133093: 'vKQi3bBA1y8', tt6723592: 'L3pk_TBkihU', tt0371724: 'eLdiWe_HJv4', tt0371724  };
+    const OMDB_YouTubeID = {tt1375666: 'YoHD9XEInc0', tt0087182: 'WHh8dzxTSNw', tt2015381: 'd96cjJhvlMA', tt0816692: 'zSWdZVtXT7E', tt0499549: '6ziBFh3V1aM', 
+    tt0848228: 'eOrNdBpGMv8', tt0076759: 'vZ734NWnAHA', tt0133093: 'vKQi3bBA1y8', tt6723592: 'L3pk_TBkihU', tt0371724: 'eLdiWe_HJv4'};
     function trailer(ID){
     for (const [key, value] of Object.entries(OMDB_YouTubeID)) {
         if (ID == key)
