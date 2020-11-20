@@ -7,22 +7,25 @@
     font-family: 'Clean_bold';
     src: url('/fonts/Clean_Bold.otf') format('opentype')
 }
+
 @font-face {
     font-family: 'Clean_light';
     src: url('/fonts/Clean_Light.otf') format('opentype')
 }
+
 @font-face {
     font-family: 'Clean_medium';
     src: url('/fonts/Clean_Medium.otf') format('opentype')
 }
 
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 body {
@@ -32,7 +35,7 @@ body {
     color: white;
 }
 
-header{
+header {
     position: relative;
     z-index: 3;
     height: 50px;
@@ -40,6 +43,7 @@ header{
     text-align: center;
     background-color: rgba(0, 0, 0, 0);
 }
+
 .hero {
     margin-top: -70px;
     position: relative;
@@ -54,14 +58,15 @@ header{
     position: absolute;
     transform: translate(-50%, -50%);
     left: 25%;
-    top: 50%;;
+    top: 50%;
+    ;
 }
 
 .heroText h1 {
     font-family: Clean_light;
     font-size: 50px;
     letter-spacing: 2px;
-}   
+}
 
 .heroText h2 {
     font-family: Clean_light;
@@ -72,15 +77,15 @@ header{
 }
 
 .heroText button {
-  background: rgb(255, 255, 255);
-  border: 2px solid #fff;
-  color: rgb(0, 0, 0);
-  font-size: 15px;
-  border-radius: 25px;
-  letter-spacing: 3px;
-  height: 2.7rem;
-  width: 12rem;
-  font-family: Clean_medium;
+    background: rgb(255, 255, 255);
+    border: 2px solid #fff;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    border-radius: 25px;
+    letter-spacing: 3px;
+    height: 2.7rem;
+    width: 12rem;
+    font-family: Clean_medium;
 }
 
 .heroText button:hover {
@@ -89,7 +94,7 @@ header{
     color: rgb(0, 0, 0);
     font-family: Clean_medium;
     cursor: pointer;
-  }
+}
 
 main {
     position: relative;
@@ -102,7 +107,7 @@ main {
     font-size: 25px;
 }
 
-main #content{
+main #content {
     padding-top: 20px;
     display: flex;
     justify-content: center;
@@ -113,20 +118,21 @@ main #content{
 main #content article img:hover {
     cursor: pointer;
     opacity: 0.8;
-    
+
 }
+
 main #content article h2:hover {
     cursor: pointer;
     color: rgb(167, 167, 167);
 }
 
-main #content img{
+main #content img {
     width: 275px;
     height: 400px;
 }
 
 
-main #content article{
+main #content article {
     padding: 20px;
     text-align: center;
     width: 300px;
@@ -134,60 +140,60 @@ main #content article{
     font-size: 13px;
 }
 
-.detailWindow{
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: hidden; 
-  background-color: rgba(0, 0, 0, 0.795);
-  
+.detailWindow {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.795);
+
 }
 
 .detailContent {
     color: rgb(255, 255, 255);
     background-color: rgb(8, 8, 8);
-    margin: 10% auto; 
+    margin: 10% auto;
     font-family: Clean_light;
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.445);
-    width: 75%; 
-     display: grid;
+    width: 75%;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 0.3s;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
     grid-template-areas:
-    ". . . close" 
-    "poster info trailer trailer"
+        ". . . close"
+        "poster info trailer trailer"
 }
 
-.poster { 
-    grid-area: poster; 
+.poster {
+    grid-area: poster;
     padding: 10px;
 }
 
 .poster img {
     max-height: 100%;
 }
-  
-.info { 
-    grid-area: info; 
+
+.info {
+    grid-area: info;
     padding: 10px;
 }
 
 .info h2 {
     font-size: 30px;
 }
-  
-.trailer { 
-    grid-area: trailer; 
+
+.trailer {
+    grid-area: trailer;
     border: 1px solid rgb(165, 165, 165);
     margin: 10px;
 }
@@ -195,10 +201,10 @@ main #content article{
 .plot h3 {
     font-size: 20px;
 }
-  
+
 .trailer iframe {
     border-style: none;
-    width: 100%; 
+    width: 100%;
     height: 100%;
 }
 
@@ -211,10 +217,9 @@ main #content article{
     font-size: 50px;
     justify-self: end;
     height: 0px;
-    }
-  
-    .close:hover {
-       cursor: pointer;
-       color: rgb(167, 167, 167);
-    }
-  
+}
+
+.close:hover {
+    cursor: pointer;
+    color: rgb(167, 167, 167);
+}
