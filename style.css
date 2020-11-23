@@ -37,7 +37,7 @@ body {
 
 header {
     position: relative;
-    z-index: 3;
+    z-index: 1;
     height: 50px;
     padding: 10px;
     text-align: center;
@@ -47,7 +47,7 @@ header {
 .hero {
     margin-top: -70px;
     position: relative;
-    height: 750px;
+    height: 80vh;
     background-image: url("media/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -150,7 +150,6 @@ main #content article {
     height: 100%;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.795);
-
 }
 
 .detailContent {
@@ -158,9 +157,9 @@ main #content article {
     background-color: rgb(8, 8, 8);
     margin: 10% auto;
     font-family: Clean_light;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.445);
-    width: 75%;
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
@@ -177,10 +176,6 @@ main #content article {
 .poster {
     grid-area: poster;
     padding: 10px;
-}
-
-.poster img {
-    max-height: 100%;
 }
 
 .info {
@@ -212,8 +207,8 @@ main #content article {
     grid-area: close;
     color: rgb(255, 255, 255);
     z-index: 999;
-    margin-top: -45px;
-    margin-right: -25px;
+    margin-top: -50px;
+    margin-right: -31px;
     font-size: 50px;
     justify-self: end;
     height: 0px;
@@ -223,3 +218,161 @@ main #content article {
     cursor: pointer;
     color: rgb(167, 167, 167);
 }
+
+@media only screen and (max-width: 1025px) {
+
+    .hero {
+        margin-top: -70px;
+        position: relative;
+        height: 80vh;
+        background-image: url("media/hero.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+
+    }
+    
+    .heroText {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+    }
+    
+    .heroText h1 {
+        font-family: Clean_light;
+        font-size: 50px;
+        letter-spacing: 2px;
+    }
+
+    .detailWindow {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.795);
+    }
+
+    .detailContent {
+        color: rgb(255, 255, 255);
+        background-color: rgb(8, 8, 8);
+        margin: 10% auto;
+        font-family: Clean_light;
+        padding: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.445);
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 0.3s;
+        grid-template-areas:
+            "close close close"
+            "poster info info"
+            "trailer trailer trailer"
+    }
+
+    
+.poster {
+    grid-area: poster;
+    padding: 10px;
+}
+
+.trailer iframe {
+    border-style: none;
+    width: 100%;
+    height: 450px;
+}
+
+  }
+
+  @media only screen and (max-width: 769px) {
+
+    .hero {
+        margin-top: -70px;
+        position: relative;
+        height: 100vh;
+        background-image: url("media/hero.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: -550px;
+
+    }
+    
+    .heroText {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+    }
+    
+    .heroText h1 {
+        font-family: Clean_light;
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+    
+    
+
+    .detailWindow {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.795);
+    }
+
+    .detailContent {
+        color: rgb(255, 255, 255);
+        background-color: rgb(8, 8, 8);
+        margin: 10% auto;
+        font-family: Clean_light;
+        padding: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.445);
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 0px 0px;
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 0.3s;
+        grid-template-areas:
+            "close"
+            "poster"
+            "info"
+            "trailer"
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .poster {
+        text-align: center;
+    }
+
+    .poster img {
+        max-width: 100%;
+
+    }
+
+    .trailer iframe {
+        border-style: none;
+        width: 100%;
+        height: 350px;
+    }
+
+  }
